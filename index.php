@@ -73,18 +73,18 @@ if (isset($_GET['delete'])) {
                     $stdreg = $r['StdReg'];
 
             ?>
-            <input class="form-control" type="text" name="stdname" VALUE="<?php echo $stdname ; ?>">
-            <input class="form-control" type="number" name="stdreg" VALUE="<?php echo $stdreg ; ?>">
-            <input type="submit" value="Update" name="update_btn" class="btn btn-primary">
+                    <input class="form-control" type="text" name="stdname" VALUE="<?php echo $stdname; ?>">
+                    <input class="form-control" type="number" name="stdreg" VALUE="<?php echo $stdreg; ?>">
+                    <input type="submit" value="Update" name="update_btn" class="btn btn-primary">
 
             <?php   }
             } ?>
-            <?php 
+            <?php
             if (isset($_POST["update_btn"])) {
                 $stdname = $_POST['stdname'];
                 $stdreg = $_POST['stdreg'];
-                $qr="UPDATE student SET StdName='$stdname',StdReg=$stdreg WHERE StdId=$stdid";
-                $updateq=mysqli_query($con, $qr);
+                $qr = "UPDATE student SET StdName='$stdname',StdReg=$stdreg WHERE StdId=$stdid";
+                $updateq = mysqli_query($con, $qr);
 
                 if ($updateq) {
                     echo " Data updated successfully";
@@ -128,7 +128,11 @@ if (isset($_GET['delete'])) {
         </table>
 
     </div>
-
+    <div class="d-flex justify-content-around" >
+        <iframe width="500" height="200" 
+        src="https://www.youtube.com/embed/tgbNymZ7vqY">
+        </iframe>
+    </div>
     <!-- Optional JavaScript -->
     <!-- Popper.js first, then Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
