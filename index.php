@@ -9,14 +9,14 @@ try {
             $query = "INSERT INTO student(StdName,StdReg) VALUE('$stdname',$stdreg)";
             $createquery = mysqli_query($con, $query);
             if ($createquery) {
-                echo "You data is submitted";
+               echo "<script>alert('Data Saved Sucessfully')</script>";
             }
         } else {
             echo "Invalid Input";
         }
     }
 } catch (Exception $e) {
-    echo "Database not Found";
+    echo "<script>alert('Database not Found')</script>";
 }
 
 
@@ -28,7 +28,7 @@ if (isset($_GET['delete'])) {
     $q = "DELETE FROM student WHERE StdId= $stdid";
     $deletequery = mysqli_query($con, $q);
     if ($deletequery) {
-        echo "Data removed successfully";
+        echo "<script>alert('Data removed Sucessfully')</script>";;
     }
 }
 
@@ -87,7 +87,7 @@ if (isset($_GET['delete'])) {
                 $updateq = mysqli_query($con, $qr);
 
                 if ($updateq) {
-                    echo " Data updated successfully";
+                    echo "<script>alert('Data updated Sucessfully')</script>";;
                 }
             }
 
