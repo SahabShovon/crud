@@ -129,7 +129,7 @@ if (isset($_GET['delete'])) {
 
     </div>
     <div class="d-flex justify-content-around" >
-        <iframe width="500" height="200" 
+        <iframe width="500" height="300" 
         src="https://www.youtube.com/embed/tgbNymZ7vqY">
         </iframe>
     </div>
